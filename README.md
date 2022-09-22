@@ -1,8 +1,7 @@
 # MAST30034 Project 2 Real Estate Industry Project README.md
 
 
-# Calculate distance and duration between properties and train stations code is in Preprocessing.ipynb file.
-# Including 10 examples
+# Calculate distance and duration between properties and train stations code is in Preprocessing.ipynb file. Including 10 examples!!!
 
 - Name: Jie Zeng (Lucinda), Hao Guan, Feiyu Lin, Xiaoyang Peng, Jiayao Lu
 - Student ID: 980320, 1174227, 1068799, 1021601, 1079059
