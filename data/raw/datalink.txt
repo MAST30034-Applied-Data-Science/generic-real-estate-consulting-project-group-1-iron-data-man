@@ -8,4 +8,6 @@ Postcode,https://www.matthewproctor.com/Content/postcodes/australian_postcodes.c
 Population,https://www.abs.gov.au/statistics/people/population/regional-population/2021/32180DS0001_2001-21.xlsx
 Income,https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/personal-income-australia/2014-15-2018-19/6524055002_DO001.xlsx
 Functional,https://www.abs.gov.au/statistics/industry/building-and-construction/land-and-housing-supply-indicators/2022/parcel_counts_sua_sa2_2022.xlsx
-transportation,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_8EH5TY.zip?orderid=2B4T05
+bus,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_8EH5TY.zip?orderid=2B4T05
+tram,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_1R8JN6.zip?orderid=FKF7OQ
+train,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_JMA52B.zip?orderid=ULRQFE
