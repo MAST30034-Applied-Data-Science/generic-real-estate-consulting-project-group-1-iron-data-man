@@ -11,3 +11,4 @@ Functional,https://www.abs.gov.au/statistics/industry/building-and-construction/
 bus,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_8EH5TY.zip?orderid=2B4T05
 tram,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_1R8JN6.zip?orderid=FKF7OQ
 train,https://s3-ap-southeast-2.amazonaws.com/cl-isd-prd-datashare-s3-delivery/Order_JMA52B.zip?orderid=ULRQFE
+Map,https://data.gov.au/data/dataset/af33dd8c-0534-4e18-9245-fc64440f742e/resource/4494abe0-64ea-4fa6-931a-d1a389a14e57/download/vic_localities.zip
