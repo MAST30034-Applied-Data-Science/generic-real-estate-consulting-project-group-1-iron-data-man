@@ -80,7 +80,7 @@ In other words, students should aim to answer the following questions:
     - `Summary.ipynb` overall summary
 
 
-To run the pipeline, please visit the `scripts` directory and run the files in order:
+To run the pipeline, please visit the `notebooks` directory and run the files in order:
 1. `Download_External.ipynb`: This downloads all external data into the `data/raw` directory.
 2. `Scrape_Data.ipynb`: This scrape property data and save as json file stored in `data/raw` directory.
 3. `Data_Cleaning_Property.ipynb`: Here ahs some basic data cleaning and save the result in `data/curated` directory.
@@ -135,6 +135,31 @@ To run the pipeline, please visit the `scripts` directory and run the files in o
 - For reverse coordinate to usual address
 - Example on [GitHub Address](https://github.com/geopy/geopy)
 
+## Correlation
+
+There are totally 9 algorithms to select top 15 features via linear correlations and features importance.
+
+**Algorithms**
+1. Pearson Correlation
+2. Mutual Information
+3. Chi-Squared
+4. Recursive Feature Elimination
+5. Embedded Method: Lasso regression
+6. Embedded Method: Tree-based RandomForest
+7. Lightgbm
+8. Embedded Method: Tree-based Extra Trees
+9. Embedded Method: Tree-based DecisionTree
+
+
+
+## Model
+
+There are 3 main methods.
+
+**Algorithms**
+1. Simple Linear Regression - Ordinary Least Square
+2. AutoRegression
+3. Random Forest Regressor
 
 ## References
 
