@@ -116,6 +116,10 @@ Actually all the dataset except climatic data are allowed to download automatica
 
 ## References
 
+- Easton, M. G., Saldais, M., Smith, R., Dumovic, V., & Machar, C. (2016). Oxford Big Ideas Humanities 8 Victorian Curriculum. Oxford University Press.
+
+- Hwang, Eunju & Glass, Anne & Gutzmann, Jon & Shin, Kyeng. (2008). The Meaning of a Livable Community for Older Adults in the United States and Korea.
+Journal of Housing for the Elderly. 22. 216-239. 10.1080/02763890802232055.
 
 **Dataset Format**
 Author, A. A. (year). Title of data set [Data set]. Publisher Name or Source of Unpublished Data. URL
