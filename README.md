@@ -125,7 +125,7 @@ To run the pipeline, please visit the `notebooks` directory and run the files in
 ## API
 **OpenRouteServices**
 - For calculate distance and duration by driving 
-- Example on [GitHub Address](https://github.com/GIScience/openrouteservice-py/blob/master/examples/basic_example.ipynb)
+- Example on [GitHub](https://github.com/GIScience/openrouteservice-py/blob/master/examples/basic_example.ipynb)
 ````
 import openrouteservice as ors
 import folium
@@ -152,7 +152,7 @@ m
 
 **GoogleMaps**
 - For both calculate distance and duration by driving and reverse coordinate to usual address
-- Example on [GitHub Address](https://github.com/googlemaps/google-maps-services-python)
+- Example on [GitHub](https://github.com/googlemaps/google-maps-services-python)
 ````
 import googlemaps
 from datetime import datetime
@@ -175,7 +175,7 @@ directions_result = gmaps.directions("Sydney Town Hall",
 
 **Geopy**
 - For reverse coordinate to usual address
-- Example on [GitHub Address](https://github.com/geopy/geopy)
+- Example on [GitHub](https://github.com/geopy/geopy)
 ````
 from geopy.geocoders import Nominatim
 
