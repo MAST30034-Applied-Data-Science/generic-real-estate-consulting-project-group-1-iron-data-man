@@ -67,22 +67,24 @@ In other words, students should aim to answer the following questions:
  - `data/curated`: Contains all curated / transformed data after preprocessing.
  - `plots`: Contains all visualisation plot from this project.
  - `scripts`: Contains all `.py` scripts, which include helper functions and modules with relevant `__init__.py`
+ - `models`: Should contain all models, but since our group all use jupyter notebook, so this folder is empty.
  - `notebook`: Contains notebooks for Downloading, Preprocessing, Visualisation, and Modelling.
-    - `scrape_data.ipynb`  scrape all rental property data from [Domain](https://www.domain.com.au/?mode=rent) by postcode.
-    - `Download_external.ipynb` download all external data, then rename them and unzip the zip file.
-    - `data_cleaning_property.ipynb`  clean useless data and extract floor, postcode and suburb
-    - `data_cleaning_external.ipynb`  try to merge all external data to property data, find the suburb for each place and unified the suburb name.
+    - `Scrape_Data.ipynb`  scrape all rental property data from [Domain](https://www.domain.com.au/?mode=rent) by postcode.
+    - `Download_External.ipynb` download all external data, then rename them and unzip the zip file.
+    - `Data_Cleaning_Property.ipynb`  clean useless data and extract floor, postcode and suburb
+    - `Data_Cleaning_External.ipynb`  try to merge all external data to property data, find the suburb for each place and unified the suburb name.
     - `Preprocessing.ipynb`  delete the outliers and calculate distances.
     - `Correlation.ipynb`  use linear correlations and feature importance to discover the relations between weekly rent and other features.
     - `Modelling.ipynb` predict the next 5 years rental price, population and income by training different models.
     - `Visualisation.ipynb` draw the plot and calculate growth rate.
+    - `Summary.ipynb` overall summary
 
 
 To run the pipeline, please visit the `scripts` directory and run the files in order:
-1. `scrape_data.ipynb`: This scrape property data and save as json file stored in `data/raw` directory.
-2. `Download_external.ipynb`: This downloads all external data into the `data/raw` directory.
-3. `data_cleaning_property.ipynb`: Here ahs some basic data cleaning and save the result in `data/curated` directory.
-4. `data_cleaning_external.ipynb`: This try to merge all datasets together and save into the in `data/curated` directory.
+1. `Download_External.ipynb`: This downloads all external data into the `data/raw` directory.
+2. `Scrape_Data.ipynb`: This scrape property data and save as json file stored in `data/raw` directory.
+3. `Data_Cleaning_Property.ipynb`: Here ahs some basic data cleaning and save the result in `data/curated` directory.
+4. `Data_Cleaning_External.ipynb`: This try to merge all datasets together and save into the in `data/curated` directory.
 5. `Preprocessing.ipynb`: The notebook is to delete outlier and calcautes distances between property and features.
 6. `Correlation.ipynb`: The notebook is to exploring the relations between weeekly rent and other features.
 7. `Modelling.ipynb`: This is used to run the model for analysing and make the prediction for next 5 years.
