@@ -89,37 +89,56 @@ To run the pipeline, please visit the `scripts` directory and run the files in o
 8. `Visualisation.ipynb`: This is for calculate the growth rate and draw the plots and all the plots will stored in `plots` directory.
 
 
+## Dataset
 
- ## Dataset
-
- **Download Manually**
- 1. Central Park weather data comes from the [National Climatic Data Center](https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00094728/detail)
-
+**Data Crawling**
+1. Rental Property from [Domain](https://www.domain.com.au/?mode=rent)
+2. Suburb from corresponding postcode from [AU Post](https://auspost.com.au/postcode)
 
 **Download Automatically**
-1. Taxi zone data from [TLC](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-2. [TLC Trip Record Data](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-3. [Aggregated Data](https://www1.nyc.gov/site/tlc/about/aggregated-reports.page) for New York Taxi
-4. The Bike data comes from [NYC Open Data Bicycle Counts](https://data.cityofnewyork.us/Transportation/Bicycle-Counts/uczf-rk3c)
-5. [Vehicle, Snowmobile, and Boat Registrations](https://data.ny.gov/Transportation/Vehicle-Snowmobile-and-Boat-Registrations/w4pv-hbkt) in NYC
+1. Sport Recreational Facilities from [VIC Open Data](https://www.data.vic.gov.au/)
+2. Cemetery detail from [VIC Open Data](https://www.data.vic.gov.au/)
+3. Median Rental Price Quarterly Report by Suburb from [VIC Open Data](https://www.data.vic.gov.au/)
+4. Affordable Letting from [VIC Open Data](https://www.data.vic.gov.au/)
+5. Median House Price by Time Series from [VIC Open Data](https://www.data.vic.gov.au/)
+6. Feature of Interest from [VIC Open Data](https://www.data.vic.gov.au/)
+7. Postcode information from [Matthew Proctor](https://www.matthewproctor.com/)
+8. Land and Housing Supply Indicator from [Australian Bureau of Statistics](https://www.abs.gov.au/)
+9. Regional Population from [Australian Bureau of Statistics](https://www.abs.gov.au/)
+10. Personal Income Australia from [Australian Bureau of Statistics](https://www.abs.gov.au/)
+11. Victoria Suburb Shapefile from [Australian Open Government Data](https://data.gov.au/)
+12. Bus Stop Location from [Public Transport Victoria](https://www.ptv.vic.gov.au/footer/data-and-reporting/datasets/)
+13. Tram Stop Location from [Public Transport Victoria](https://www.ptv.vic.gov.au/footer/data-and-reporting/datasets/)
+14. Train Station Location from [Public Transport Victoria](https://www.ptv.vic.gov.au/footer/data-and-reporting/datasets/)
 
-Actually all the dataset except climatic data are allowed to download automatically. However, due to the limitation of Chinese Internet Firewall, it takes very long time and may has connection error. So, large file I will download manually
 
 **Data Explaination**
-- [Taxi Fare](https://www1.nyc.gov/site/tlc/passengers/taxi-fare.page)
-- Bicycle Count Status
-  - 0 = raw
+- There are multiple geographical dimension
+    1. sa2
+    2. locality
+    3. Suburb
+    4. Local Governmant Area
+- NOT ALL the external datasets can be merged with property data
 
-- National Climatic Data Types
-  - SNOW - Snowfall
+## API
+**OpenRouteServices**
+- For calculate distance and duration by driving 
+- Example on [GitHub Address](https://github.com/GIScience/openrouteservice-py/blob/master/examples/basic_example.ipynb)
+
+**GoogleMaps**
+- For both calculate distance and duration by driving and reverse coordinate to usual address
+- Example on [GitHub Address](https://github.com/googlemaps/google-maps-services-python)
+
+**Geopy**
+- For reverse coordinate to usual address
+- Example on [GitHub Address](https://github.com/geopy/geopy)
 
 
 ## References
 
 - Easton, M. G., Saldais, M., Smith, R., Dumovic, V., & Machar, C. (2016). Oxford Big Ideas Humanities 8 Victorian Curriculum. Oxford University Press.
 
-- Hwang, Eunju & Glass, Anne & Gutzmann, Jon & Shin, Kyeng. (2008). The Meaning of a Livable Community for Older Adults in the United States and Korea.
-Journal of Housing for the Elderly. 22. 216-239. 10.1080/02763890802232055.
+- Hwang, Eunju & Glass, Anne & Gutzmann, Jon & Shin, Kyeng. (2008). The Meaning of a Livable Community for Older Adults in the United States and Korea. Journal of Housing for the Elderly. 22. 216-239. 10.1080/02763890802232055.
 
 **Dataset Format**
 Author, A. A. (year). Title of data set [Data set]. Publisher Name or Source of Unpublished Data. URL
