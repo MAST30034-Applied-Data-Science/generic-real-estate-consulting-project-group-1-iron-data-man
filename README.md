@@ -126,14 +126,70 @@ To run the pipeline, please visit the `notebooks` directory and run the files in
 **OpenRouteServices**
 - For calculate distance and duration by driving 
 - Example on [GitHub Address](https://github.com/GIScience/openrouteservice-py/blob/master/examples/basic_example.ipynb)
+````
+import openrouteservice as ors
+import folium
+
+client = ors.Client(key='')
+m = folium.Map(location=[52.521861, 13.40744], tiles='cartodbpositron', zoom_start=13)
+
+# Some coordinates in Berlin
+coordinates = [[13.42731, 52.51088], [13.384116, 52.533558]]
+
+route = client.directions(
+    coordinates=coordinates,
+    profile='foot-walking',
+    format='geojson',
+    options={"avoid_features": ["steps"]},
+    validate=False,
+)
+folium.PolyLine(locations=[list(reversed(coord)) 
+                           for coord in 
+                           route['features'][0]['geometry']['coordinates']]).add_to(m)
+    
+m
+````
 
 **GoogleMaps**
 - For both calculate distance and duration by driving and reverse coordinate to usual address
 - Example on [GitHub Address](https://github.com/googlemaps/google-maps-services-python)
+````
+import googlemaps
+from datetime import datetime
+
+gmaps = googlemaps.Client(key='Add Your Key here')
+
+# Geocoding an address
+geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+
+# Look up an address with reverse geocoding
+reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+
+# Request directions via public transit
+now = datetime.now()
+directions_result = gmaps.directions("Sydney Town Hall",
+                                     "Parramatta, NSW",
+                                     mode="transit",
+                                     departure_time=now)
+````
 
 **Geopy**
 - For reverse coordinate to usual address
 - Example on [GitHub Address](https://github.com/geopy/geopy)
+````
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim(user_agent="specify_your_app_name_here")
+location = geolocator.reverse("52.509669, 13.376294")
+print(location.address)
+>>> Potsdamer Platz, Mitte, Berlin, 10117, Deutschland, European Union
+
+print((location.latitude, location.longitude))
+>>> (52.5094982, 13.3765983)
+
+print(location.raw)
+>>> {'place_id': '654513', 'osm_type': 'node', ...}
+````
 
 ## Correlation
 
