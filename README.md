@@ -1,8 +1,4 @@
 # MAST30034 Project 2 Real Estate Industry Project README.md
-
-
-# Calculate distance and duration between properties and train stations code is in Preprocessing.ipynb file. Including 10 examples!!!
-
 - Name: Jie Zeng (Lucinda), Hao Guan, Feiyu Lin, Xiaoyang Peng, Jiayao Lu
 - Student ID: 980320, 1174227, 1068799, 1021601, 1079059
 
@@ -27,45 +23,70 @@ In other words, students should aim to answer the following questions:
 1. What are the most important internal and external features in predicting rental prices?
 2. What are the top 10 suburbs with the highest predicted growth rate?
 3. What are the most liveable and affordable suburbs according to your chosen metrics?
+4. Any Business Recommdations?
 
-## Timeline:
-The timeline for the research area is from Jan to March and Oct to Dec, 2019
 
  ## Dependencies
  - <img src="https://iconape.com/wp-content/files/zt/11663/png/python.png" width="18" height="18"/> Language: Python 3.8.10
  - <img src="https://iconape.com/wp-content/files/lw/17759/png/cib-anaconda.png" width="18" height="18"/> Environment: Conda 4.13.0
  - <img src="https://iconape.com/wp-content/files/zt/11663/png/python.png" width="18" height="18"/> Python Libraries: 
-   1. urllib3
-   2. pandas
-   3. numpy
-   4. matplotlib
-   5. seaborn
+   1. re
+   2. os
+   3. bs4
+   4. json
+   5. time
    6. scipy
-   7. sklearn
-   8. statsmodels
-   9. geopandas
-   10. folium
-   11. selenium
+   7. numpy
+   8. geopy
+   9. folium
+   10. pandas
+   11. sklearn
+   12. IPython
+   13. seaborn
+   14. tushare
+   15. zipfile
+   16. difflib
+   17. urllib3
+   18. requests
+   19. selenium
+   20. datetime
+   21. warnings
+   22. lightgbm
+   23. geopandas
+   24. haversine
+   25. googlemaps
+   26. matplotlib
+   27. statsmodels
+   28. collections
+   29. openrouteservice
+   30. webdriver_manager
+
 
  ## Directory
- - `data/raw_data`: Contains most raw data files downloaded from the Internet, but part of the raw data are not allowed to access directly and it is too large to upload, so those raw data will not be included in this folder.
+ - `data/raw_data`: Contains all raw data files downloaded from the Internet and scrape from domain website.
  - `data/curated`: Contains all curated / transformed data after preprocessing.
  - `plots`: Contains all visualisation plot from this project.
  - `scripts`: Contains all `.py` scripts, which include helper functions and modules with relevant `__init__.py`
  - `notebook`: Contains notebooks for Downloading, Preprocessing, Visualisation, and Modelling.
-    - `download.ipynb` for Download TLC dataset from the Internet.
-    - `preprocess-taxi.ipynb` for Cleaning and Preprocessing raw taxi data.
-    - `preprocessing-external.ipynb` for Cleaning and Preprocessing raw external data.
-    - `analysis.ipynb` for Visualisation and Analysis curated data.
-    - `Modelling&Map.ipynb` for Statistical Modelling curated data and generated map figures.
+    - `scrape_data.ipynb`  scrape all rental property data from [Domain](https://www.domain.com.au/?mode=rent) by postcode.
+    - `Download_external.ipynb` download all external data, then rename them and unzip the zip file.
+    - `data_cleaning_property.ipynb`  clean useless data and extract floor, postcode and suburb
+    - `data_cleaning_external.ipynb`  try to merge all external data to property data, find the suburb for each place and unified the suburb name.
+    - `Preprocessing.ipynb`  delete the outliers and calculate distances.
+    - `Correlation.ipynb`  use linear correlations and feature importance to discover the relations between weekly rent and other features.
+    - `Modelling.ipynb` predict the next 5 years rental price, population and income by training different models.
+    - `Visualisation.ipynb` draw the plot and calculate growth rate.
 
 
 To run the pipeline, please visit the `scripts` directory and run the files in order:
-1. `download.ipynb`: This downloads the raw data into the `data/raw` directory.
-2. `preprocess-taxi.ipynb`: This notebook details all preprocessing steps for taxi data and outputs it to the `data/curated` directory.
-3. `preprocess-external.ipynb`: This notebook details all preprocessing steps for external data and outputs it to the `data/curated` directory.
-4. `analysis.ipynb`: This notebook is used to conduct analysis on the curated data.
-5. `Modelling&Map.ipynb`: The script is used to run the model for analysing and discussing the model, also generates map figures.
+1. `scrape_data.ipynb`: This scrape property data and save as json file stored in `data/raw` directory.
+2. `Download_external.ipynb`: This downloads all external data into the `data/raw` directory.
+3. `data_cleaning_property.ipynb`: Here ahs some basic data cleaning and save the result in `data/curated` directory.
+4. `data_cleaning_external.ipynb`: This try to merge all datasets together and save into the in `data/curated` directory.
+5. `Preprocessing.ipynb`: The notebook is to delete outlier and calcautes distances between property and features.
+6. `Correlation.ipynb`: The notebook is to exploring the relations between weeekly rent and other features.
+7. `Modelling.ipynb`: This is used to run the model for analysing and make the prediction for next 5 years.
+8. `Visualisation.ipynb`: This is for calculate the growth rate and draw the plots and all the plots will stored in `plots` directory.
 
 
 
